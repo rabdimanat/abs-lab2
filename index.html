@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rakhat | ADS-LAB2</title>
+    <meta name="robots" content="index, follow" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/png" href="https://www.robinremsa.com/wp-content/uploads/2019/04/cropped-R-favicon.png" />
+
+    <link rel="stylesheet" href="assets/css/vendor/Pe-icon-7-stroke.css" />	
+    <link rel="stylesheet" href="assets/css/plugins/jquery-ui.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <div class="main-wrapper">  
+        <main class="main-content">
+            <div class="breadcrumb-area breadcrumb-height" data-bg-image="assets/images/me.jpg">
+                <div class="container h-100">
+                    <div class="row h-100">
+                        <div class="col-lg-12">
+                            <div class="breadcrumb-item text-night-rider">
+                                <h2 class="breadcrumb-heading">Lab 2</h2>
+								<h6>Abdimanat Rakhat | CS-2009</h6>
+                                <ul>
+                                    <li>
+                                        <a href="https://imrakhat.tech">Home /</a>
+                                    </li>
+                                    <li>ADS-LAB2</li>
+                                </ul>
+								
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+            <div class="faq-area section-space-y-axis-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="frequently-area">
+                                <h2 class="heading mb-0">Lab classes</h2>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="frequently-item">
+                                                    <ul>
+                                                        <li class="has-sub active">
+                                                            <a href="javascript:void(0)">1 class: Main
+                                                                <i class="pe-7s-angle-down"></i>
+                                                            </a>
+                                                            <ul class="frequently-body">
+                                                                <li>               
+<br>public class Main {
+<br>	
+	public static void main(String[] args) {<br>
+		SLinkedList<String> list = new SLinkedList<String>();<br>
+		list.addNode("hi");<br>
+		list.addNode("good bye");<br>
+		System.out.print(list.display());<br>
+	}
+}
+
+
+                                                                </li>
+																
+                                                            </ul>
+                                                        </li>
+                                                        <li class="has-sub">
+                                                            <a href="javascript:void(0)">2 class: MyArrayList
+                                                                <i class="pe-7s-angle-down"></i>
+                                                            </a>
+                                                            <ul class="frequently-body">
+                                                                <li>
+<strong>import java.util.Arrays;</strong><br>
+
+public class MyArrayList<T> {<br>
+	 private Object[] array;<br>
+	 private int capacity = 2;<br>
+	 private int size = 0;<br>
+	<br>
+	public MyArrayList() {<br>
+		this.array = new Object[capacity];<br>
+	}<br>
+	<br>
+	public void add(T newItem, int index) { <br>
+		if(index < capacity) {<br>
+			if(size == capacity) {<br>
+				increaseBuffer();<br>
+			}<br>
+			if(size != 0) {<br>
+				for(int i = index; i < this.size(); i++) { <br>
+					array[i+1] = array[i];<br>
+				}<br>
+					array[index] = newItem;<br>
+			} else {<br>
+				array[index] = newItem;<br>
+			}<br>
+			this.size++;<br>
+		}  <br>
+	}<br>
+	public int find(T item) {<br>
+		for(int i = 0; i < this.size; i++) {<br>
+			if(array[i] == item) {<br>
+				return i;<br>
+			}<br>
+		}<br>
+		<br>
+		return -1;<br>
+	}<br>
+	
+	public void reverse() {<br>
+		for(int i = 0; i < this.size/ 2; i++) {<br>
+			T temp = this.get(i);<br>
+			array[i] = array[this.size() - i - 1];<br>
+			array[this.size - i - 1] = temp;<br>
+		}<br>
+	}
+	public T get(int index) {<br>
+	        return (T) array[index];<br>
+	  }
+	private void increaseBuffer() {<br>
+        capacity = (int) (1.5 * capacity);<br>
+        Object[] array2 = new Object[capacity];<br>
+        for (int i = 0; i < this.size(); i++) {
+            array2[i] = array[i];<br>
+        }
+
+        array = array2;<br>
+    }
+	
+    public int size() {<br>
+    	return this.size;<br>
+    }<br>
+	@Override<br>
+	public String toString() {<br>
+		return "MyArrayList [array=" + Arrays.toString(array) + ", capacity=" + capacity + ", size=" + size + "]";<br>
+	}
+}
+
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                       
+                                                        
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 pt-6 pt-md-0">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="frequently-item">
+                                                    <ul>
+                                                        <li class="has-sub active">
+                                                            <a href="javascript:void(0)">3 class: MyLinkedList
+                                                                <i class="pe-7s-angle-down"></i>
+                                                            </a>
+                                                            <ul class="frequently-body">
+                                                                <li>
+																
+<strong>import java.util.Iterator;</strong><br>
+public class MyLinkedList<T> implements Iterable<T> {<br>
+	Node head;<br>
+	Node tail;<br>
+	private int size = 0; <br>
+	<br>
+	public MyLinkedList() {<br>
+		this.head = null; <br>
+	}<br>
+	
+	public void add(T element, int index) {<br>
+ <br>
+        if (index < 0 || index > size()) {<br>
+            throw new IndexOutOfBoundsException();<br>
+        }<br>
+  <br>
+        Node<T> currNode = head; <br>
+        Node<T> preTargetNode = null; <br>
+        Node<T> newNode = new Node<T>(element);<br>
+        if (index == 0) {<br>
+        	newNode.next = head;<br>
+	        head = newNode; <br>
+        } else {<br>
+<br>
+            for (int i = 0; i < index; i++) {<br>
+                preTargetNode = currNode;<br>
+                currNode = currNode.next;<br>
+            }<br>
+<br>
+            preTargetNode.next = (newNode);<br>
+            newNode.next = currNode; <br>
+<br>
+            if (preTargetNode == tail) {<br>
+                tail = newNode;<br>
+                tail.next = null;<br>
+            }<br>
+            <br>
+        }<br>
+        this.size++;<br>
+    }<br>
+	  
+	public int find(T keyItem) {<br>
+	    Node<T> currnode = this.head;<br>
+	    int index = 0;  <br>
+	    while(index < this.size()) {  <br>
+	    	if(currnode.data.equals(keyItem)) {<br>
+	    		return index; <br>
+	    	}<br>
+	    	index++;<br>
+	    	currnode = currnode.next;<br>
+	    }<br>
+		return -1;<br>
+	}<br>
+	public T remove(int index) {<br>
+	    if (index<0 || index >=size()) {<br>
+	        throw new IndexOutOfBoundsException();<br>
+	    }<br>
+	    Node ref = head;<br>
+	    for (int i = 0; i < index; i++) {<br>
+	        ref = ref.next;<br>
+	    }<br>
+	    if (index == 0) {<br>
+	        head = ref.next;<br>
+	    } else {<br>
+	        ref.prev.next = ref.next;<br>
+	    }<br>
+	    size--;<br>
+	    return (T) ref.data;<br>
+	}<br>
+	<br>
+	 Node reverse()<br>
+	    {<br>
+		 Node prev = null;<br>
+		 Node current = head;<br>
+		 Node next = null;<br>
+	        while (current != null) {<br>
+	            next = current.next;<br>
+	            current.next = prev;<br>
+	            prev = current;<br>
+	            current = next;<br>
+	        }<br>
+	        head = prev;<br>
+	        return head;<br>
+	    }<br>
+	public int size() {<br>
+		return this.size;<br>
+	}<br>
+	class Node<E> {<br>
+		Node<E> next;<br>
+		Node<E> prev;<br>
+		E data;<br>
+		public Node(E data) {<br>
+			this.next = null;<br>
+			this.prev = null;<br>
+			this.data = data;<br>
+		}<br>
+	}<br>
+
+<br><br>
+	@Override<br>
+	public Iterator<T> iterator() { <br>
+		return new MyIterator();<br>
+	}<br>
+<br>
+    private class MyIterator implements Iterator<T> {<br>
+        Node<T> cursor = head;<br>
+        <br>
+        @Override<br>
+        public boolean hasNext() {<br>
+            return cursor != null;<br>
+        }<br>
+<br>
+        @Override<br>
+        public T next() {<br>
+            T nextItem = cursor.data;<br>
+            cursor = cursor.next;<br>
+            return nextItem;<br>
+        }<br>
+    }<br>
+    <br>
+    @Override public String toString() {<br>
+        StringBuilder s = new StringBuilder();<br>
+        for (T item : this)<br>
+            s.append(item + " ");<br>
+        return s.toString();<br>
+    }
+
+}
+
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="has-sub">
+                                                            <a href="javascript:void(0)">4 class:SLinkedList
+
+                                                                <i class="pe-7s-angle-down"></i>
+                                                            </a>
+                                                            <ul class="frequently-body">
+                                                                <li>
+
+public class SLinkedList<T> {<br>
+	Node head;<br>
+	Node tail;<br>
+	<br>
+	public void addNode(T item) {<br>
+		Node currentnode = new Node(item);<br>
+		if(head == null) {<br>
+			this.head  = currentnode;<br>
+		} else {<br>
+			Node<T> current = head;<br>
+            while (current.next != null)<br>
+                current = current.next;<br>
+<br>
+            current.next = currentnode;<br>
+		}<br>
+		<br>
+	}<br>
+	public String display() {<br>
+		if(this.head != null) {<br>
+			Node<T> currentnode = this.head;<br>
+			String str = this.head.data + " ";<br>
+			while(currentnode.next != null) { <br>
+				currentnode = currentnode.next;<br>
+<br>
+				str += currentnode.data + " ";<br>
+			}<br>
+			return str;<br>
+		} else {<br>
+			return "null";<br>
+		}<br>
+	}<br>
+	
+	
+	
+	
+	class Node<E> {<br>
+		Node next;<br>
+		E data;<br>
+		public Node(E data) {<br>
+			this.next = null;<br>
+			this.data = data;<br>
+		}
+	}
+}
+
+                                                                   </li>
+                                                            </ul>
+                                                        </li>
+
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+       
+
+    </div>
+
+
+
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/plugins/wow.min.js"></script>
+    <script src="assets/js/plugins/ion.rangeSlider.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
